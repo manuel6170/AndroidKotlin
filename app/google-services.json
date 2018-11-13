@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "387102666674",
+    "firebase_url": "https://appburbujas.firebaseio.com",
+    "project_id": "appburbujas",
+    "storage_bucket": "appburbujas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:387102666674:android:dd5197107e9b2ce9",
+        "android_client_info": {
+          "package_name": "com.mcmoviles.manuel.appburbujas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "387102666674-okfdg3ucnm1i6fc2uurnb4rpghapilkt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mcmoviles.manuel.appburbujas",
+            "certificate_hash": "c14e0095169bbc2bf5c7f0803901f1873f93c36d"
+          }
+        },
+        {
+          "client_id": "387102666674-aafgeqbckbi42vfusionghg59i7b1ej7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYoHNqcXSLE4v-M0TOKDQOdFrnEMFmN_k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "387102666674-aafgeqbckbi42vfusionghg59i7b1ej7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

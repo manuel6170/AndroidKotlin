@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textViewHeight">40dp</dimen>
+    <dimen name="textViewWidth">110dp</dimen>
+    <dimen name="editViewHeight">40dp</dimen>
+    <dimen name="editViewWidth">165dp</dimen>
+
+    <dimen name="btnHeight">57dp</dimen>
+    <dimen name="btnWidth">140dp</dimen>
+    <dimen name="txtSize">18sp</dimen>
+
+</resources>
