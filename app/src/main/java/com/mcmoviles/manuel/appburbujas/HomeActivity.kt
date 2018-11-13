@@ -8,7 +8,7 @@ import com.mcmoviles.manuel.appburbujas.Fragments.FragmentOne
 import com.mcmoviles.manuel.appburbujas.Fragments.FragmentTwo
 import kotlinx.android.synthetic.main.activity_main3.*
 
-class Main3Activity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
     val manager = supportFragmentManager
     private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->

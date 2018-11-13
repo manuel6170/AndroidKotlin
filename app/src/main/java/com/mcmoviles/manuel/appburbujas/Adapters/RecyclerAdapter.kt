@@ -18,7 +18,7 @@ import com.mcmoviles.manuel.appburbujas.Model.DbManager
 import com.mcmoviles.manuel.appburbujas.Model.User
 import com.mcmoviles.manuel.appburbujas.R
 import com.mcmoviles.manuel.appburbujas.TimeActivity
-import kotlinx.android.synthetic.main.item_lavadoras_list.view.*
+
 
 class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>(){
 
