@@ -50,13 +50,14 @@ class RecyclerAdapter: RecyclerView.Adapter<RecyclerAdapter.ViewHolder>(){
             var capacidad = listaLavadoras.get(position).capacidad
             var valHora = listaLavadoras.get(position).valorHora
             var imagen = listaLavadoras.get(position).imagen
-
-            intent.putExtra("id",id)
+            var estado = listaLavadoras.get(position).estado
+            intent.putExtra("id",id.toString())
             intent.putExtra("marca", marca)
             intent.putExtra("capacidad", capacidad)
             intent.putExtra("valorHora", valHora)
+            intent.putExtra("estado", valHora)
             intent.putExtra("img",imagen)
-            context.startActivity(intent)
+            this.context.startActivity(intent)
         }
     }
 

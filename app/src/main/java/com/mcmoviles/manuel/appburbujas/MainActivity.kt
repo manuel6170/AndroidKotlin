@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
     }
 */
     fun readFireBase(){
-        var id :String= ""
+        var id :Int= 0
         var mar :String= ""
         var cap :String= ""
         var valHora :Int=0
@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
                 if (p0.exists()){
                     for (h in p0.children){
                         var bundle = h.getValue(Lavadora::class.java)
-                        id = bundle!!.id
+                        id = bundle!!.id.toInt()
                         mar = bundle.marca
                         cap = bundle!!.capacidad
                         valHora = bundle!!.valorHora
@@ -97,7 +97,7 @@ class MainActivity : AppCompatActivity() {
                         var myLavadora = Lavadora(id,mar,cap,valHora,estado,imagen)
                         lavList.add(myLavadora)
                     }
-                    myAdapter.RecyclerAdapter( lavList,applicationContext)
+                    myAdapter.RecyclerAdapter( lavList,this@MainActivity)
                     recyclerViewId.adapter = myAdapter
                 }
             }
@@ -108,9 +108,10 @@ class MainActivity : AppCompatActivity() {
     }
 
      fun saveFireBase(view: View){
-        val keyId= ref.push().key.toString()
+        //val keyId= ref.push().key.toString()
+         val keyId=100
         val lavadora = Lavadora(keyId,"Samsung","27lb",1000,"estado","https://i2.wp.com/www.clipset.net/wp-content/uploads/2011/04/LG-Smart-Diagnosis.jpg")
-        ref.child(keyId).setValue(lavadora).addOnCompleteListener {
+        ref.child(keyId.toString()).setValue(lavadora).addOnCompleteListener {
            Toast.makeText(this,"Lavadora guardada",Toast.LENGTH_SHORT).show()
         }
 }

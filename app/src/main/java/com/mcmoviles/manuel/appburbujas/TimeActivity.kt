@@ -19,10 +19,11 @@ class TimeActivity : AppCompatActivity() {
 
     var urlLavadora:String?= null
     var myDialog: Dialog?=null
-    var id: String?=null
+    var id: Int?=null
     var marca :String?= null
     var capacidad :String?= null
     var valHora :Int?=null
+    var estado :String?= null
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,17 +31,18 @@ class TimeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_time)
         myDialog = Dialog(this)
         val bundle = intent.extras
-        id = bundle["id"].toString()
+        id = bundle["id"].toString().toInt()
         marca = bundle["marca"].toString()
         capacidad = bundle["capacidad"].toString()
         valHora = bundle["valorHora"].toString().toInt()
         urlLavadora = bundle["img"].toString()
+        estado = bundle["estado"].toString()
 
         Glide.with(this).load(urlLavadora).into(imgLavadora)
 
         //Almacenamos con SQLIte
-       /* var dbManager = DbManager(this)
-        var lavadora = Lavadora(id!!,marca!!,capacidad!!,valHora!!,true,urlLavadora!!)
+        var dbManager = DbManager(this)
+        var lavadora = Lavadora(id!!,marca!!,capacidad!!,valHora!!,estado!!,urlLavadora!!)
         var result = dbManager.insertData(lavadora)
 
         if(result>0){
@@ -50,7 +52,7 @@ class TimeActivity : AppCompatActivity() {
           Toast.makeText(this,"DATOS NO NO NO NO", Toast.LENGTH_SHORT).show()
         }
 
-*/
+
 
 
 
