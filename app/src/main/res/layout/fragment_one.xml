@@ -3,14 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.FragmentOne"
-    android:background="@color/colorPrimary">
+    tools:context=".Fragments.FragmentListLavadoras"
+    >
+           <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewIdF"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:ignore="MissingConstraints">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="ONE"
-        android:textColor="#fff"/>
+        </android.support.v7.widget.RecyclerView>
+
 
 </FrameLayout>

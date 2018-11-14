@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
-import com.mcmoviles.manuel.appburbujas.Fragments.FragmentOne
+import com.mcmoviles.manuel.appburbujas.Fragments.FragmentListLavadoras
 import com.mcmoviles.manuel.appburbujas.Fragments.FragmentTwo
 import kotlinx.android.synthetic.main.activity_main3.*
 
@@ -41,7 +41,7 @@ class HomeActivity : AppCompatActivity() {
 
     fun createFragmentOne(){
         val transaction = manager.beginTransaction()
-        val fragment = FragmentOne()
+        val fragment = FragmentListLavadoras()
         transaction.replace(R.id.fragmentHolder,fragment)
         transaction.addToBackStack(null)
         transaction.commit()
