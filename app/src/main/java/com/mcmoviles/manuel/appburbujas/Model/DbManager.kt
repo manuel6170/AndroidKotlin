@@ -58,7 +58,18 @@ class DbManager(context: Context?) {
 
     }
 
+    fun getOneData(id:String):Cursor{
+        openDb()
+        return db!!.rawQuery("SELECT id FROM "+Constantes.NAME_TABLE+" WHERE id=?", arrayOf(id))
+    }
 
+    fun deleteData(id:String){
+        openDb()
+        db?.delete(Constantes.NAME_TABLE,"id =?",arrayOf(id))
+
+
+
+    }
 
 
 }

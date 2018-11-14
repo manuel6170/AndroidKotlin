@@ -40,18 +40,19 @@ class TimeActivity : AppCompatActivity() {
 
         Glide.with(this).load(urlLavadora).into(imgLavadora)
 
-        //Almacenamos con SQLIte
-        var dbManager = DbManager(this)
-        var lavadora = Lavadora(id!!,marca!!,capacidad!!,valHora!!,estado!!,urlLavadora!!)
-        var result = dbManager.insertData(lavadora)
+        imgStarId.setOnClickListener {
+            var dbManager = DbManager(this)
+            var lavadora = Lavadora(id!!,marca!!,capacidad!!,valHora!!,estado!!,urlLavadora!!)
+            var result = dbManager.insertData(lavadora)
 
-        if(result>0){
-          Toast.makeText(this,"GUARDADOS", Toast.LENGTH_SHORT).show()
-        }else
-        {
-          Toast.makeText(this,"DATOS NO NO NO NO", Toast.LENGTH_SHORT).show()
+            if(result>0){
+                Toast.makeText(this,"GUARDADOS", Toast.LENGTH_SHORT).show()
+            }else
+            {
+                Toast.makeText(this,"DATOS NO NO NO NO", Toast.LENGTH_SHORT).show()
+            }
+
         }
-
 
 
 
@@ -75,15 +76,15 @@ class TimeActivity : AppCompatActivity() {
 
 
 
-btnAceptarTiempo.setOnClickListener {
-  //val intent = Intent(this, listActivity::class.java)
-  //startActivity(intent)
-  myDialog!!.setContentView(R.layout.dialog_custom)
-  myDialog!!.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-  myDialog!!.show()
+    btnAceptarTiempo.setOnClickListener {
+      //val intent = Intent(this, listActivity::class.java)
+      //startActivity(intent)
+      myDialog!!.setContentView(R.layout.dialog_custom)
+      myDialog!!.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+      myDialog!!.show()
 
-}
-}
+    }
+    }
 
 
 
