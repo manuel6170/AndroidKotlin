@@ -4,7 +4,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.mcmoviles.manuel.appburbujas.Adapters.ViewPagerAdapter
 import com.mcmoviles.manuel.appburbujas.Fragments.FragmentListLavadoras
-import com.mcmoviles.manuel.appburbujas.Fragments.FragmentTwo
+import com.mcmoviles.manuel.appburbujas.Fragments.FragmentFavoritos
+import com.mcmoviles.manuel.appburbujas.Fragments.FragmentPerfil
 import kotlinx.android.synthetic.main.activity_tab.*
 
 class TabActivity : AppCompatActivity() {
@@ -15,7 +16,8 @@ class TabActivity : AppCompatActivity() {
 
         var viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
         viewPagerAdapter.AddFragment(FragmentListLavadoras(),"HOME")
-        viewPagerAdapter.AddFragment(FragmentTwo(),"FAVORITOS")
+        viewPagerAdapter.AddFragment(FragmentFavoritos(),"FAVORITOS")
+        viewPagerAdapter.AddFragment(FragmentPerfil(),"PERFIL")
 
         viewPagerId.adapter = viewPagerAdapter
         tabLayoutId.setupWithViewPager(viewPagerId)

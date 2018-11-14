@@ -16,7 +16,7 @@ import com.mcmoviles.manuel.appburbujas.HomeActivity
 
 import com.mcmoviles.manuel.appburbujas.R
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_one.*
+import kotlinx.android.synthetic.main.fragment_list_lavadoras.*
 
 
 class FragmentListLavadoras : Fragment() {
@@ -27,10 +27,12 @@ class FragmentListLavadoras : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_one, container, false)
+        val view = inflater.inflate(R.layout.fragment_list_lavadoras, container, false)
         lavList = mutableListOf()
         ref = FirebaseDatabase.getInstance().getReference("lavadoras")
         myAdapter = RecyclerAdapter()
+
+
         readFireBase(container!!.context)
         Toast.makeText(container!!.context,"estas en lista fragment",Toast.LENGTH_SHORT).show()
         return view
@@ -60,8 +62,7 @@ class FragmentListLavadoras : Fragment() {
                         var myLavadora = Lavadora(id,mar,cap,valHora,estado,imagen)
                         lavList.add(myLavadora)
                     }
-
-                            recyclerViewIdF.layoutManager = GridLayoutManager(mContext,2)
+                    recyclerViewIdF.layoutManager= GridLayoutManager(mContext,2)
                    myAdapter.RecyclerAdapter( lavList,mContext)
                    recyclerViewIdF.adapter = myAdapter
                 }
@@ -71,7 +72,6 @@ class FragmentListLavadoras : Fragment() {
 
 
     }
-
 
 
 
