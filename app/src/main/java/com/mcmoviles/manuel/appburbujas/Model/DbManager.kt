@@ -5,6 +5,7 @@ import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import com.mcmoviles.manuel.appburbujas.Class.Lavadora
+import com.mcmoviles.manuel.appburbujas.Class.Usuario
 
 class DbManager(context: Context?) {
     //lamamos la conexion
@@ -43,6 +44,8 @@ class DbManager(context: Context?) {
 
     }
 
+
+
     fun getData():Cursor{
         openDb()
         return db!!.rawQuery(Constantes.CONSULT,null)
@@ -71,5 +74,39 @@ class DbManager(context: Context?) {
 
     }
 
+
+    //tabla usuarios
+    fun insertDataUsuario(usuario:Usuario ): Long{
+        openDb()
+        var contentValues = ContentValues()
+        contentValues.put(Constantes.COLUMN_NOMBRE,usuario.nombre)
+        contentValues.put(Constantes.COLUMN_TELEFONO,usuario.telefono)
+        contentValues.put(Constantes.COLUMN_IDENTIFICACION,usuario.identificacion)
+
+        //llamamos el metodo insert de SQLIteDatabase
+        var result = db?.insert(Constantes.NAME_TABLE_USUARIO,null,contentValues)
+        return result!!
+
+    }
+
+    fun getOneDataUsuario(id:String):Cursor{
+        openDb()
+        return db!!.rawQuery("SELECT id FROM "+Constantes.NAME_TABLE_USUARIO+" WHERE id=?", arrayOf(id))
+    }
+
+    fun getAllDataUsuario(): Cursor {
+        openDbReadable()
+        return db!!.query(Constantes.NAME_TABLE_USUARIO, arrayOf(Constantes.COLUMN_NOMBRE,Constantes.COLUMN_TELEFONO,Constantes.COLUMN_IDENTIFICACION),
+            null,null,null,null,null)
+
+    }
+
+    fun deleteDataUsuario(){
+        openDb()
+         db?.delete(Constantes.NAME_TABLE_USUARIO,null,null)
+
+
+
+    }
 
 }

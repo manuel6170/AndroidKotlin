@@ -2,20 +2,14 @@ package com.mcmoviles.manuel.appburbujas.Adapters
 
 import android.content.Context
 import android.content.Intent
-import android.support.v4.content.ContextCompat
-import android.support.v4.content.ContextCompat.startActivity
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.mcmoviles.manuel.appburbujas.Class.Lavadora
-import com.mcmoviles.manuel.appburbujas.MapsActivity
-import com.mcmoviles.manuel.appburbujas.Model.DbManager
-import com.mcmoviles.manuel.appburbujas.Model.User
 import com.mcmoviles.manuel.appburbujas.R
 import com.mcmoviles.manuel.appburbujas.TimeActivity
 

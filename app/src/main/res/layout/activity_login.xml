@@ -41,6 +41,7 @@
         android:layout_marginTop="60dp">
 
         <EditText
+                android:id="@+id/editTxtNombre"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="Nombre"
@@ -49,6 +50,7 @@
             android:fontFamily="@font/roboto_thin"
             />
         <EditText
+                android:id="@+id/editTxtIdentificacion"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="Identificacion"
@@ -59,6 +61,7 @@
             />
 
         <EditText
+                android:id="@+id/editTxtCelular"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:hint="Celular"
