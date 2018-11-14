@@ -9,8 +9,10 @@ import android.os.Bundle
 import android.widget.Toast
 import com.bumptech.glide.Glide
 import com.mcmoviles.manuel.appburbujas.Class.Lavadora
+import com.mcmoviles.manuel.appburbujas.Model.Constantes
 import com.mcmoviles.manuel.appburbujas.Model.DbManager
 import kotlinx.android.synthetic.main.activity_time.*
+import kotlinx.android.synthetic.main.dialog_custom.*
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
@@ -30,6 +32,8 @@ class TimeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_time)
         myDialog = Dialog(this)
+
+        //txtViewNombreDialog.text = "prueba"
         val bundle = intent.extras
         id = bundle["id"].toString().toInt()
         marca = bundle["marca"].toString()
@@ -38,8 +42,11 @@ class TimeActivity : AppCompatActivity() {
         urlLavadora = bundle["img"].toString()
         estado = bundle["estado"].toString()
 
-        Glide.with(this).load(urlLavadora).into(imgLavadora)
+        //datos personales
 
+
+        Glide.with(this).load(urlLavadora).into(imgLavadora)
+        //AGREGAR A FAVORITOS AL DAR CLICK EN LA ESTRELLA
         imgStarId.setOnClickListener {
             var dbManager = DbManager(this)
             var lavadora = Lavadora(id!!,marca!!,capacidad!!,valHora!!,estado!!,urlLavadora!!)
@@ -49,7 +56,7 @@ class TimeActivity : AppCompatActivity() {
                 Toast.makeText(this,"GUARDADOS", Toast.LENGTH_SHORT).show()
             }else
             {
-                Toast.makeText(this,"DATOS NO NO NO NO", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this,"DATOS NO ALMACENADOS", Toast.LENGTH_SHORT).show()
             }
 
         }
@@ -73,15 +80,35 @@ class TimeActivity : AppCompatActivity() {
     }
 
 
-
-
-
     btnAceptarTiempo.setOnClickListener {
-      //val intent = Intent(this, listActivity::class.java)
-      //startActivity(intent)
-      myDialog!!.setContentView(R.layout.dialog_custom)
-      myDialog!!.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-      myDialog!!.show()
+     var nombre=""
+        var telefono =""
+        var identificacion=""
+
+        //TRAEMOS LOS DATOS DEL USUARIO
+        var dbManager= DbManager(this)
+        var result = dbManager.getAllDataUsuario()
+
+        if (result!!.moveToFirst()){
+
+             nombre = result!!.getString(result!!.getColumnIndex(Constantes.COLUMN_NOMBRE))
+             telefono = result!!.getString(result!!.getColumnIndex(Constantes.COLUMN_TELEFONO))
+             identificacion = result!!.getString(result!!.getColumnIndex(Constantes.COLUMN_IDENTIFICACION))
+             Toast.makeText(this,"EL USUARIO en SQL"+nombre, Toast.LENGTH_SHORT).show()
+             //txttViewTelefonoDialog.text = result!!.getString(result!!.getColumnIndex(Constantes.COLUMN_TELEFONO))
+             //txtViewIdentiDialog.text = result!!.getString(result!!.getColumnIndex(Constantes.COLUMN_IDENTIFICACION))
+            myDialog!!.setContentView(R.layout.dialog_custom)
+            //txtViewNombreDialog.text = "prueba"
+            //txttViewTelefonoDialog.text = telefono
+            //txtViewIdentiDialog.text= identificacion
+            myDialog!!.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+            myDialog!!.show()
+
+        }else{
+            Toast.makeText(this,"EL USUARIO DEBE REGISTRARSE", Toast.LENGTH_SHORT).show()
+        }
+
+
 
     }
     }
