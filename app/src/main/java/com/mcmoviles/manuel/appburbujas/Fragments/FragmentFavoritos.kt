@@ -24,16 +24,22 @@ class FragmentFavoritos : Fragment() {
     lateinit var ref: DatabaseReference
     lateinit var lavList: MutableList<Lavadora>
     lateinit var myAdapter : RecyclerAdapter
-
+    lateinit var contenedor : ViewGroup
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_favoritos, container, false)
         lavList = mutableListOf()
         ref = FirebaseDatabase.getInstance().getReference("lavadoras")
         myAdapter = RecyclerAdapter()
+        contenedor = container!!
         readFireBase(container!!.context)
         //Toast.makeText(container!!.context,"estas en favoritos", Toast.LENGTH_SHORT).show()
         return view
+    }
+
+    override fun onResume() {
+        super.onResume()
+        readFireBase(contenedor!!.context)
     }
 
     fun readFireBase(mContext : Context){
@@ -46,13 +52,9 @@ class FragmentFavoritos : Fragment() {
                     recyclerFavoritos.layoutManager = GridLayoutManager(mContext,2)
                     myAdapter.RecyclerAdapter( getListLavadoras(mContext),mContext)
                     recyclerFavoritos.adapter = myAdapter
-
                 }
             }
-
         })
-
-
     }
 
     fun getListLavadoras(mContext : Context):MutableList<Lavadora>{
@@ -70,8 +72,6 @@ class FragmentFavoritos : Fragment() {
                 listLavadoras.add(lavadora)
 
             }while (result.moveToNext())
-
-
         }else{
             Toast.makeText(mContext,"Sin conexion a Base de Datos Interna", Toast.LENGTH_SHORT).show()
 

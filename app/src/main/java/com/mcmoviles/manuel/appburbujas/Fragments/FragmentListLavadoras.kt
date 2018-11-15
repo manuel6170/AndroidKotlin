@@ -63,8 +63,8 @@ class FragmentListLavadoras : Fragment() {
                         lavList.add(myLavadora)
                     }
                     recyclerViewIdF.layoutManager= GridLayoutManager(mContext,2)
-                   myAdapter.RecyclerAdapter( lavList,mContext)
-                   recyclerViewIdF.adapter = myAdapter
+                    myAdapter.RecyclerAdapter( lavList,mContext)
+                    recyclerViewIdF.adapter = myAdapter
                 }
             }
 

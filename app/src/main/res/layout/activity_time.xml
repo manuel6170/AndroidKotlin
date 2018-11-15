@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         tools:context=".TimeActivity"
         android:background="#ffff"
-        >
+>
 
 
     <ImageView
@@ -25,9 +25,12 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/guideline"/>
 
-    <android.support.constraint.Guideline android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                          android:id="@+id/guideline" app:layout_constraintGuide_begin="212dp"
-                                          android:orientation="horizontal"/>
+    <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="260dp" />
     <TextView
             android:text="Fecha Inicio"
             android:layout_width="@dimen/textViewWidth"
@@ -113,16 +116,33 @@
             android:id="@+id/btnAceptarTiempo" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
             android:layout_marginTop="40dp" app:layout_constraintTop_toBottomOf="@+id/txtViewTPagar"
-            tools:text=" ACEPTAR   "
+            tools:text=" ACEPTAR     "
             android:drawableRight="@drawable/ic_send_black_24dp"/>
+
     <ImageView
-            android:layout_width="34dp"
-            android:layout_height="34dp" app:srcCompat="@drawable/ic_star_half_black_24dp"
             android:id="@+id/imgStarId"
-            android:clickable="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="17dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="4dp"
             android:backgroundTint="@color/colorYellow"
-            app:layout_constraintStart_toStartOf="@+id/imgLavadora"
+            android:clickable="true"
+            app:layout_constraintBottom_toTopOf="@+id/editTxtFechaI"
             app:layout_constraintEnd_toEndOf="@+id/imgLavadora"
-            app:layout_constraintTop_toBottomOf="@+id/imgLavadora"/>
+            app:layout_constraintStart_toEndOf="@+id/imgDelete"
+            app:layout_constraintTop_toBottomOf="@+id/imgLavadora"
+            app:srcCompat="@drawable/ic_star_half_black_24dp" />
+
+    <ImageView
+            android:id="@+id/imgDelete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgStarId"
+            app:layout_constraintEnd_toStartOf="@+id/imgStarId"
+            app:layout_constraintStart_toStartOf="@+id/imgLavadora"
+            app:srcCompat="@drawable/ic_delete_black_24dp" />
 
 </android.support.constraint.ConstraintLayout>

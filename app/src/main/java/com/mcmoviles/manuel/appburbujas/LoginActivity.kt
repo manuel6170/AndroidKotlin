@@ -23,6 +23,7 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this,"USUARIO REGISTRADO ", Toast.LENGTH_SHORT).show()
             val inten = Intent(this,TabActivity::class.java)
             startActivity(inten)
+            finish()
 
         }else{
             Toast.makeText(this,"EL USUARIO DEBE REGISTRARSE", Toast.LENGTH_SHORT).show()
@@ -40,6 +41,7 @@ class LoginActivity : AppCompatActivity() {
             else{Toast.makeText(this,"DATOS NO ALMACENADOS", Toast.LENGTH_SHORT).show()}
             val inten = Intent(this,TabActivity::class.java)
             startActivity(inten)
+            finish()
 
 
         }

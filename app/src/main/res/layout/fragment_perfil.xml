@@ -1,80 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Fragments.FragmentPerfil"
-    android:orientation="vertical">
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".Fragments.FragmentPerfil"
+              android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="25dp"
-        android:background="@color/colorPrimaryDark"
-        >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="25dp"
+            android:background="@color/colorPrimaryDark"
+    >
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/roboto_thin"
-            android:text="WELCOME!"
-            android:textColor="#fff"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_thin"
+                android:text="WELCOME!"
+                android:textColor="#fff"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+        <Button
+                android:id="@+id/btnEditarUsuarioId"
+                android:layout_gravity="center"
+                android:layout_width="44dp"
+                android:layout_height="34dp"
+                android:background="@drawable/btn_style_out_line"
+                android:textSize="15dp"
+                android:layout_marginLeft="110dp"
+                android:textColor="#fff"
+                android:fontFamily="@font/roboto_thin"
+                android:drawableRight="@drawable/ic_edit_black_24dp"/>
 
 
     </LinearLayout>
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:layout_marginTop="60dp">
-
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:hint="Nombre"
-            android:layout_margin="3dp"
-            android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
-            android:fontFamily="@font/roboto_thin"
-            />
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:hint="Identificacion"
-            android:inputType="number"
-            android:layout_margin="3dp"
-            android:drawableLeft="@drawable/ic_perm_contact_calendar_black_24dp"
-            android:fontFamily="@font/roboto_thin"
-            />
-
-        <EditText
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:hint="Celular"
-            android:inputType="number"
-            android:layout_margin="3dp"
-            android:drawableLeft="@drawable/ic_phone_black_24dp"
-            android:fontFamily="@font/roboto_thin"
-            />
-
-        <Button
-            android:id="@+id/guardarUsuarioId"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/button_style"
-            android:backgroundTint="@color/colorAccent"
-            android:text="Guardar  "
-            android:textSize="15dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp">
 
-            android:textColor="#fff"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/roboto_thin"
-            android:drawableRight="@drawable/ic_send_black_24dp"/>
+        <EditText
+                android:id="@+id/nombrePerfil"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:layout_margin="3dp"
+                android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
+                android:fontFamily="@font/roboto_thin"
+                android:enabled="false"
+        />
+        <EditText
+                android:id="@+id/IdentificacionPerfil"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Identificacion"
+                android:inputType="number"
+                android:layout_margin="3dp"
+                android:drawableLeft="@drawable/ic_perm_contact_calendar_black_24dp"
+                android:fontFamily="@font/roboto_thin"
+                android:enabled="false"
+        />
+
+        <EditText
+                android:id="@+id/telefonoPerfil"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Celular"
+                android:inputType="number"
+                android:layout_margin="3dp"
+                android:drawableLeft="@drawable/ic_phone_black_24dp"
+                android:fontFamily="@font/roboto_thin"
+                android:enabled="false"
+        />
+
+        <Button
+                android:id="@+id/btnGuarUsuarioId"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_style"
+                android:backgroundTint="@color/colorAccent"
+                android:text="EDITAR  "
+                android:textSize="15dp"
+                android:textColor="#fff"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/roboto_thin"
+                android:drawableRight="@drawable/ic_send_black_24dp"/>
+
+
 
     </LinearLayout>
 

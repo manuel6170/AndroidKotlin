@@ -66,10 +66,9 @@ class DbManager(context: Context?) {
         return db!!.rawQuery("SELECT id FROM "+Constantes.NAME_TABLE+" WHERE id=?", arrayOf(id))
     }
 
-    fun deleteData(id:String){
+    fun deleteDataFavoritos(args: String){
         openDb()
-        db?.delete(Constantes.NAME_TABLE,"id =?",arrayOf(id))
-
+        db?.delete(Constantes.NAME_TABLE,"marca=?", arrayOf(args))
 
 
     }
@@ -103,7 +102,7 @@ class DbManager(context: Context?) {
 
     fun deleteDataUsuario(){
         openDb()
-         db?.delete(Constantes.NAME_TABLE_USUARIO,null,null)
+        db?.delete(Constantes.NAME_TABLE_USUARIO,null,null)
 
 
 
