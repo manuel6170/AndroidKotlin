@@ -11,7 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="25dp"
+            android:padding="@dimen/paddingLinearLayout"
             android:background="@color/colorPrimaryDark"
     >
 
@@ -19,21 +19,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/roboto_thin"
-                android:text="WELCOME!"
-                android:textColor="#fff"
-                android:textSize="30sp"
+                android:text="@string/titleBienvenidoLogin"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textSizeBienvenidaLogin"
                 android:textStyle="bold" />
 
         <Button
                 android:id="@+id/btnEditarUsuarioId"
                 android:layout_gravity="center"
-                android:layout_width="44dp"
-                android:layout_height="34dp"
+                android:layout_width="@dimen/widthIconEdit"
+                android:layout_height="@dimen/widthIconEdit"
                 android:background="@drawable/btn_style_out_line"
-                android:textSize="15dp"
-                android:layout_marginLeft="110dp"
-                android:textColor="#fff"
-                android:fontFamily="@font/roboto_thin"
+                android:layout_marginLeft="@dimen/marginLeftIcon"
+                android:textColor="@color/colorWhite"
                 android:drawableRight="@drawable/ic_edit_black_24dp"/>
 
 
@@ -43,25 +41,25 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="vertical"
-            android:layout_marginTop="60dp">
+            android:layout_marginTop="@dimen/marginTop">
 
         <EditText
                 android:id="@+id/nombrePerfil"
-                android:layout_width="300dp"
+                android:layout_width="@dimen/widthEditTextView"
                 android:layout_height="wrap_content"
-                android:hint="Nombre"
-                android:layout_margin="3dp"
+                android:hint="@string/editTextNameLogin"
+                android:layout_margin="@dimen/layoutMarginTextView"
                 android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
                 android:fontFamily="@font/roboto_thin"
                 android:enabled="false"
         />
         <EditText
                 android:id="@+id/IdentificacionPerfil"
-                android:layout_width="300dp"
+                android:layout_width="@dimen/widthEditTextView"
                 android:layout_height="wrap_content"
-                android:hint="Identificacion"
+                android:hint="@string/editTextIdLogin"
                 android:inputType="number"
-                android:layout_margin="3dp"
+                android:layout_margin="@dimen/layoutMarginTextView"
                 android:drawableLeft="@drawable/ic_perm_contact_calendar_black_24dp"
                 android:fontFamily="@font/roboto_thin"
                 android:enabled="false"
@@ -69,11 +67,11 @@
 
         <EditText
                 android:id="@+id/telefonoPerfil"
-                android:layout_width="300dp"
+                android:layout_width="@dimen/widthEditTextView"
                 android:layout_height="wrap_content"
-                android:hint="Celular"
+                android:hint="@string/editTextCelularLogin"
                 android:inputType="number"
-                android:layout_margin="3dp"
+                android:layout_margin="@dimen/layoutMarginTextView"
                 android:drawableLeft="@drawable/ic_phone_black_24dp"
                 android:fontFamily="@font/roboto_thin"
                 android:enabled="false"
@@ -86,10 +84,10 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_style"
                 android:backgroundTint="@color/colorAccent"
-                android:text="EDITAR  "
-                android:textSize="15dp"
-                android:textColor="#fff"
-                android:layout_marginTop="30dp"
+                android:text="@string/textBtnEdit"
+                android:textSize="@dimen/textSizeBtn"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="@dimen/marginTopBtn"
                 android:fontFamily="@font/roboto_thin"
                 android:drawableRight="@drawable/ic_send_black_24dp"/>
 

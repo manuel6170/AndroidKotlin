@@ -12,12 +12,12 @@
         android:id="@+id/tabLayoutId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabTextColor="#fff"
+        app:tabTextColor="@color/colorWhite"
         app:tabGravity="fill"
         app:tabMode="fixed"
         app:tabBackground="@color/colorPrimary"
-        app:tabIndicatorHeight="3dp"
-        app:tabIndicatorColor="#fff"
+        app:tabIndicatorHeight="@dimen/tabIndicatorHeight"
+        app:tabIndicatorColor="@color/colorWhite"
         ></android.support.design.widget.TabLayout>
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPagerId"

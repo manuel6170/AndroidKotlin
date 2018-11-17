@@ -11,5 +11,6 @@
     <color name="background">#f3f3f3</color>
     <color name="textSecondary">#D7D7D8</color>
     <color name="color">#C9DDE6</color>
+    <color name="colorWhite">#FFFFFF</color>
     <color name="colorYellow">#F3A85F</color>
 </resources>

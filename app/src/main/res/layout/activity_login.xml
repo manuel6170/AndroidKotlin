@@ -11,24 +11,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="25dp"
-        android:background="@color/colorPrimaryDark"
-        >
+        android:padding="@dimen/paddingLogin"
+        android:background="@color/colorPrimaryDark">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto_thin"
-            android:text="WELCOME!"
-            android:textColor="#fff"
-            android:textSize="30sp"
+            android:text="@string/titleBienvenidoLogin"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/textSizeBienvenidaLogin"
             android:textStyle="bold" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. "
+            android:text="@string/textDescripcionLogin"
             android:textColor="#fff"
-            android:textSize="15sp"
+            android:textSize="@dimen/textSize"
             android:fontFamily="@font/roboto_thin"
             />
 
@@ -38,35 +37,35 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:orientation="vertical"
-        android:layout_marginTop="60dp">
+        android:layout_marginTop="@dimen/marginTop">
 
         <EditText
-                android:id="@+id/editTxtNombre"
-            android:layout_width="300dp"
+            android:id="@+id/editTxtNombre"
+            android:layout_width="@dimen/widthEditTextView"
             android:layout_height="wrap_content"
-            android:hint="Nombre"
-            android:layout_margin="3dp"
+            android:hint="@string/editTextNameLogin"
+            android:layout_margin="@dimen/layout_marginEditText"
             android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
             android:fontFamily="@font/roboto_thin"
             />
         <EditText
-                android:id="@+id/editTxtIdentificacion"
-            android:layout_width="300dp"
+            android:id="@+id/editTxtIdentificacion"
+            android:layout_width="@dimen/widthEditTextView"
             android:layout_height="wrap_content"
-            android:hint="Identificacion"
+            android:hint="@string/editTextIdLogin"
             android:inputType="number"
-            android:layout_margin="3dp"
+            android:layout_margin="@dimen/layout_marginEditText"
             android:drawableLeft="@drawable/ic_perm_contact_calendar_black_24dp"
             android:fontFamily="@font/roboto_thin"
             />
 
         <EditText
-                android:id="@+id/editTxtCelular"
-            android:layout_width="300dp"
+            android:id="@+id/editTxtCelular"
+            android:layout_width="@dimen/widthEditTextView"
             android:layout_height="wrap_content"
-            android:hint="Celular"
+            android:hint="@string/editTextCelularLogin"
             android:inputType="number"
-            android:layout_margin="3dp"
+            android:layout_margin="@dimen/layout_marginEditText"
             android:drawableLeft="@drawable/ic_phone_black_24dp"
             android:fontFamily="@font/roboto_thin"
             />
@@ -78,11 +77,10 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_style"
             android:backgroundTint="@color/colorAccent"
-            android:text="Guardar  "
-            android:textSize="15dp"
-
-            android:textColor="#fff"
-            android:layout_marginTop="30dp"
+            android:text="@string/textBtnGuardarLogin"
+            android:textSize="@dimen/textSizeBtn"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="@dimen/marginTopBtn"
             android:fontFamily="@font/roboto_thin"
             android:drawableRight="@drawable/ic_send_black_24dp"/>
 

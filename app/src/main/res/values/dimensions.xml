@@ -9,4 +9,38 @@
     <dimen name="btnWidth">140dp</dimen>
     <dimen name="txtSize">18sp</dimen>
 
+    <!-- Dimensiones del layout LOGIN -->
+    <dimen name="paddingLogin">25dp</dimen>
+    <dimen name="textSizeBienvenidaLogin">30sp</dimen>
+    <dimen name="textSize">15sp</dimen>
+    <dimen name="marginTop">60dp</dimen>
+    <dimen name="widthEditTextView">300dp</dimen>
+    <dimen name="layout_marginEditText">3dp</dimen>
+    <dimen name="textSizeBtn">15sp</dimen>
+    <dimen name="marginTopBtn">30dp</dimen>
+
+    <!-- Dimensiones de Tab -->
+    <dimen name="tabIndicatorHeight">3dp</dimen>
+
+    <!-- Dimensiones de cardView -->
+    <dimen name="cardElevation">2dp</dimen>
+    <dimen name="marginCardView">1dp</dimen>
+    <dimen name="layout_height_Card_View">192dp</dimen>
+    <dimen name="padding_Card_View">15dp</dimen>
+    <dimen name="paddingLinearLayout">15dp</dimen>
+    <dimen name="textSizeMarca">15dp</dimen>
+    <dimen name="textSizeNumHora">15dp</dimen>
+    <dimen name="textSizeCap">15dp</dimen>
+    <dimen name="paddingLayout">25dp</dimen>
+    <dimen name="widthIconEdit">44dp</dimen>
+    <dimen name="marginLeftIcon">110dp</dimen>
+    <dimen name="layoutMarginTextView">3dp</dimen>
+    <dimen name="paddingImg">20dp</dimen>
+    <dimen name="emsEditText">10</dimen>
+
+
+
+
+
+
 </resources>

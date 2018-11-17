@@ -4,10 +4,10 @@
         android:layout_width="180dp"
         android:layout_height="wrap_content" xmlns:app="http://schemas.android.com/apk/res-auto"
         app:cardCornerRadius="0dp"
-        app:cardElevation="2dp"
+        app:cardElevation="@dimen/cardElevation"
         app:cardUseCompatPadding="true"
-        android:layout_marginTop="1dp"
-        android:layout_marginHorizontal="1dp"
+        android:layout_marginTop="@dimen/marginCardView"
+        android:layout_marginHorizontal="@dimen/marginCardView"
         android:layout_marginBottom="0dp"
 
 
@@ -21,9 +21,9 @@
         <ImageView
                 android:id="@+id/imgViewLavadoraId"
                 android:layout_width="match_parent"
-                android:layout_height="192dp"
-                android:src="#333"
-                android:padding="15dp"
+                android:layout_height="@dimen/layout_height_Card_View"
+                android:src="@color/colorPrimary"
+                android:padding="@dimen/padding_Card_View"
                 android:scaleType="centerCrop"/>
 
         <LinearLayout
@@ -31,14 +31,14 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorAccent"
                 android:orientation="vertical"
-                android:padding="11dp">
+                android:padding="@dimen/paddingLinearLayout">
 
             <TextView
                     android:id="@+id/txtViewMarcaId"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Marca"
-                    android:textSize="20dp"
+                    android:text="@string/textMarcaCardView"
+                    android:textSize="@dimen/textSizeMarca"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"
                     android:textStyle="normal|bold"
             />
@@ -47,16 +47,16 @@
                         android:id="@+id/txtViewNumHId"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="$0"
+                        android:text="@string/textViewNumHoras"
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"
-                        android:textSize="15sp"/>
+                        android:textSize="@dimen/textSizeNumHora"/>
                 <TextView
                         android:id="@+id/txtViewCapId"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="27lb"
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"
-                        android:textSize="15sp"/>
+                        android:textSize="@dimen/textSizeCap"/>
 
 
 
