@@ -8,7 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.bumptech.glide.Glide
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.mcmoviles.manuel.appburbujas.Class.Lavadora
 import com.mcmoviles.manuel.appburbujas.Class.Reserva
 import com.mcmoviles.manuel.appburbujas.R
@@ -16,13 +19,14 @@ import com.mcmoviles.manuel.appburbujas.TimeActivity
 
 
 class RecyclerAdapterReservas: RecyclerView.Adapter<RecyclerAdapterReservas.ViewHolder>(){
-
+    var ref: DatabaseReference= FirebaseDatabase.getInstance().getReference("reservaciones")
     var listReservas : MutableList<Reserva> = ArrayList()
     lateinit var context: Context
 
     fun RecyclerAdapterReservas(listReservas : MutableList<Reserva>, context: Context){
         this.listReservas= listReservas
         this.context= context
+
 
     }
 
@@ -39,6 +43,11 @@ class RecyclerAdapterReservas: RecyclerView.Adapter<RecyclerAdapterReservas.View
         val item = listReservas.get(position)
         holder.bind(item,context)
         holder.itemView.setOnClickListener {
+            listReservas.get(position).estado="respondida"
+            ref.child(listReservas.get(position).idReserva).setValue(listReservas.get(position)).addOnCompleteListener {
+                Toast.makeText(context,"Reservacion respondida", Toast.LENGTH_SHORT).show()
+
+            }
 
 
         }

@@ -1,6 +1,7 @@
 package com.mcmoviles.manuel.appburbujas.Class
 
 data class Reserva(
+    var idReserva:String,
     var idLavadora: String,
     var idUsuario: String,
     var totalPagar: Int,
@@ -9,6 +10,6 @@ data class Reserva(
     var estado: String,
     var horaEnvio:String) {
 
-    constructor():this("","",0,0,"","",""){}
+    constructor():this("","","",0,0,"","",""){}
 
 }

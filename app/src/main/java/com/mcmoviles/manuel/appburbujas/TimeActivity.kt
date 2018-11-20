@@ -99,8 +99,9 @@ class TimeActivity : AppCompatActivity() {
                 //Insertar datos en firebase
                 val horaEnvio = sdf.format(Date())
                 var keyId = ref.push().key.toString()
-                reserva=Reserva(lavadora.id.toString(),usuario.identificacion,totalPagar!!,horasUso!!,"carrea 17 # 60","enviada",horaEnvio)
-                ref.child(keyId).setValue(reserva).addOnCompleteListener {
+                val random = Random().nextInt(100000000).toString()
+                reserva=Reserva(random,lavadora.id.toString(),usuario.identificacion,totalPagar!!,horasUso!!,"carrea 17 # 60","enviada",horaEnvio)
+                ref.child(random).setValue(reserva).addOnCompleteListener {
                     Toast.makeText(this,"Reservacion Guardada",Toast.LENGTH_SHORT).show()
                     myDialog!!.dismiss()
                 }
