@@ -29,7 +29,7 @@
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
+                android:background="@color/colorPrimary"
                 android:orientation="vertical"
                 android:padding="@dimen/paddingLinearLayout">
 
@@ -38,16 +38,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/textMarcaCardView"
+                    android:fontFamily="@font/roboto_thin"
+
                     android:textSize="@dimen/textSizeMarca"
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"
-                    android:textStyle="normal|bold"
+                    android:textStyle="bold"
             />
 
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:orientation="horizontal"
+                    >
                 <TextView
                         android:id="@+id/txtViewNumHId"
-                        android:layout_width="match_parent"
+                        android:layout_width="115dp"
                         android:layout_height="wrap_content"
                         android:text="@string/textViewNumHoras"
+                        android:fontFamily="@font/roboto_thin"
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"
                         android:textSize="@dimen/textSizeNumHora"/>
                 <TextView
@@ -55,12 +65,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="27lb"
+                        android:fontFamily="@font/roboto_thin"
                         android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"
                         android:textSize="@dimen/textSizeCap"/>
 
-
-
-
+            </LinearLayout>
 
         </LinearLayout>
 

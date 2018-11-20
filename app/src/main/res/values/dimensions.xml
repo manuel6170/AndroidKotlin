@@ -3,7 +3,7 @@
     <dimen name="textViewHeight">40dp</dimen>
     <dimen name="textViewWidth">110dp</dimen>
     <dimen name="editViewHeight">40dp</dimen>
-    <dimen name="editViewWidth">165dp</dimen>
+    <dimen name="editViewWidth">175dp</dimen>
 
     <dimen name="btnHeight">57dp</dimen>
     <dimen name="btnWidth">140dp</dimen>
@@ -26,9 +26,9 @@
     <dimen name="cardElevation">2dp</dimen>
     <dimen name="marginCardView">1dp</dimen>
     <dimen name="layout_height_Card_View">192dp</dimen>
-    <dimen name="padding_Card_View">15dp</dimen>
-    <dimen name="paddingLinearLayout">15dp</dimen>
-    <dimen name="textSizeMarca">15dp</dimen>
+    <dimen name="padding_Card_View">25dp</dimen>
+    <dimen name="paddingLinearLayout">8dp</dimen>
+    <dimen name="textSizeMarca">18dp</dimen>
     <dimen name="textSizeNumHora">15dp</dimen>
     <dimen name="textSizeCap">15dp</dimen>
     <dimen name="paddingLayout">25dp</dimen>
