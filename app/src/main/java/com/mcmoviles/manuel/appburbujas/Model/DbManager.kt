@@ -88,6 +88,21 @@ class DbManager(context: Context?) {
 
     }
 
+    fun updateDataUsuario(usuario:Usuario ): Int{
+        openDb()
+        var contentValues = ContentValues()
+        contentValues.put(Constantes.COLUMN_NOMBRE,usuario.nombre)
+        contentValues.put(Constantes.COLUMN_TELEFONO,usuario.telefono)
+        //contentValues.put(Constantes.COLUMN_IDENTIFICACION,usuario.identificacion)
+
+        //llamamos el metodo actualizar de SQLIteDatabase
+        var result = db?.update(Constantes.NAME_TABLE_USUARIO,contentValues, "${Constantes.COLUMN_IDENTIFICACION}= ?  ",
+            arrayOf(usuario.identificacion))
+        return result!!
+
+    }
+
+
     fun getOneDataUsuario(id:String):Cursor{
         openDb()
         return db!!.rawQuery("SELECT id FROM "+Constantes.NAME_TABLE_USUARIO+" WHERE id=?", arrayOf(id))
@@ -103,8 +118,6 @@ class DbManager(context: Context?) {
     fun deleteDataUsuario(){
         openDb()
         db?.delete(Constantes.NAME_TABLE_USUARIO,null,null)
-
-
 
     }
 

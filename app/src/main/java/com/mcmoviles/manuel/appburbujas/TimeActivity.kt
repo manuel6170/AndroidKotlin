@@ -3,6 +3,7 @@ package com.mcmoviles.manuel.appburbujas
 import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.media.MediaPlayer
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -106,6 +107,8 @@ class TimeActivity : AppCompatActivity() {
                     myDialog!!.dismiss()
                 }
             }
+            val mp = MediaPlayer.create(this,R.raw.alerta2)
+            mp.start()
             myDialog!!.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
             myDialog!!.show()
 

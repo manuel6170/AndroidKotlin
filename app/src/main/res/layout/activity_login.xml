@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/textDescripcionLogin"
-            android:textColor="#fff"
+            android:textColor="@color/colorWhite"
             android:textSize="@dimen/textSize"
             android:fontFamily="@font/roboto_thin"
             />
@@ -78,6 +78,7 @@
             android:background="@drawable/button_style"
             android:backgroundTint="@color/colorAccent"
             android:text="@string/textBtnGuardarLogin"
+            android:textStyle="bold"
             android:textSize="@dimen/textSizeBtn"
             android:textColor="@color/colorWhite"
             android:layout_marginTop="@dimen/marginTopBtn"

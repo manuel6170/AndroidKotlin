@@ -15,7 +15,7 @@ import com.mcmoviles.manuel.appburbujas.Class.Lavadora
 import com.mcmoviles.manuel.appburbujas.HomeActivity
 
 import com.mcmoviles.manuel.appburbujas.R
-import kotlinx.android.synthetic.main.activity_main.*
+//import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_list_lavadoras.*
 
 
@@ -34,7 +34,7 @@ class FragmentListLavadoras : Fragment() {
 
 
         readFireBase(container!!.context)
-        Toast.makeText(container!!.context,"estas en lista fragment",Toast.LENGTH_SHORT).show()
+        Toast.makeText(container!!.context,resources.getString(R.string.toastDatosUpdate),Toast.LENGTH_SHORT).show()
         return view
     }
 

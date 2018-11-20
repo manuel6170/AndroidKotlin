@@ -53,9 +53,9 @@ class FragmentReservas: Fragment() {
                     }
                     //val adaptador1 = ArrayAdapter<String>(container!!.context, android.R.layout.simple_list_item_1,reservas)
                     //view.findViewById<ListView>(R.id.list1).adapter = adaptador1
-                    view!!.findViewById<RecyclerView>(R.id.recyclerViewIdReservas).layoutManager = GridLayoutManager(contenedor.context,1)
+                    view!!.findViewById<RecyclerView>(R.id.recyclerViewIdReservas).layoutManager = GridLayoutManager(contenedor.context!!,1)
                     //recyclerViewIdF.layoutManager= GridLayoutManager(mContext,2)
-                    myAdapter.RecyclerAdapterReservas( listReservas,contenedor.context)
+                    myAdapter.RecyclerAdapterReservas( listReservas,contenedor.context!!)
                     view!!.findViewById<RecyclerView>(R.id.recyclerViewIdReservas).adapter = myAdapter
                 }
             }

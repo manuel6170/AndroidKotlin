@@ -14,7 +14,7 @@ import com.mcmoviles.manuel.appburbujas.Class.Lavadora
 import com.mcmoviles.manuel.appburbujas.Model.Constantes
 import com.mcmoviles.manuel.appburbujas.Model.DbManager
 import com.mcmoviles.manuel.appburbujas.R
-import kotlinx.android.synthetic.main.activity_main.*
+
 import kotlinx.android.synthetic.main.fragment_favoritos.*
 import kotlinx.android.synthetic.main.fragment_list_lavadoras.*
 
@@ -73,7 +73,7 @@ class FragmentFavoritos : Fragment() {
 
             }while (result.moveToNext())
         }else{
-            Toast.makeText(mContext,"Sin conexion a Base de Datos Interna", Toast.LENGTH_SHORT).show()
+            Toast.makeText(mContext,resources.getString(R.string.toastSinGuardar), Toast.LENGTH_SHORT).show()
 
         }
 

@@ -51,7 +51,7 @@
             android:textStyle="bold"
             android:fontFamily="@font/roboto_thin"
             android:id="@+id/txtViewHoras"
-            tools:text="Horas:"
+
             tools:ignore="MissingConstraints" android:layout_marginTop="16dp"
             app:layout_constraintTop_toBottomOf="@+id/txtViewFechaI"
             app:layout_constraintStart_toStartOf="@+id/txtViewFechaI"/>
@@ -70,7 +70,7 @@
             android:layout_width="@dimen/editViewWidth"
             android:layout_height="@dimen/editViewHeight"
             android:inputType="date"
-            android:hint="nov 11"
+
             android:ems="10"
             android:textSize="@dimen/txtSize"
             android:fontFamily="@font/roboto_thin"
@@ -85,7 +85,7 @@
             android:layout_width="@dimen/editViewWidth"
             android:layout_height="@dimen/editViewHeight"
             android:inputType="number"
-            android:hint="Numero Horas"
+            android:hint="@string/hintHoraUso"
             android:ems="10"
             android:textSize="@dimen/txtSize"
             android:fontFamily="@font/roboto_thin"
@@ -100,7 +100,7 @@
     <TextView
             android:layout_width="@dimen/editViewWidth"
             android:layout_height="@dimen/editViewHeight"
-            android:hint="$0"
+            android:hint="@string/hintPesos"
             android:textColor="@color/colorBtn"
             android:ems="10"
             android:gravity="center_vertical"
@@ -119,8 +119,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="15dp"
+            android:textSize="@dimen/textSizeBtn"
             android:textStyle="bold"
+            android:fontFamily="@font/roboto_thin"
             android:backgroundTint="@color/colorBtn"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead.Inverse"
             android:background="@drawable/button_style"
@@ -134,8 +135,8 @@
 
     <ImageView
             android:id="@+id/imgStarId"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/widthIcon"
+            android:layout_height="@dimen/widthIcon"
             android:backgroundTint="@color/colorYellow"
             android:clickable="true"
             app:srcCompat="@drawable/ic_star_half_black_24dp"
@@ -146,8 +147,8 @@
 
     <ImageView
             android:id="@+id/imgDelete"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/widthIcon"
+            android:layout_height="@dimen/widthIcon"
             app:srcCompat="@drawable/ic_delete_black_24dp"
             app:layout_constraintStart_toStartOf="@+id/btnAceptarTiempo" android:layout_marginStart="8dp"
             app:layout_constraintEnd_toStartOf="@+id/imgStarId"

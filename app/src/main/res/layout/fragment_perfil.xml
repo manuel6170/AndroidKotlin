@@ -12,7 +12,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:padding="@dimen/paddingLinearLayout"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/colorPrimary"
     >
 
         <TextView
@@ -79,12 +79,14 @@
 
         <Button
                 android:id="@+id/btnGuarUsuarioId"
+                android:enabled="false"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_style"
                 android:backgroundTint="@color/colorAccent"
                 android:text="@string/textBtnEdit"
+                android:textStyle="bold"
                 android:textSize="@dimen/textSizeBtn"
                 android:textColor="@color/colorWhite"
                 android:layout_marginTop="@dimen/marginTopBtn"

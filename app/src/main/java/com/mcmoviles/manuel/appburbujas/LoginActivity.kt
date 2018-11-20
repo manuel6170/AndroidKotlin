@@ -20,13 +20,13 @@ class LoginActivity : AppCompatActivity() {
         var result = dbManager.getAllDataUsuario()
         if (result.moveToFirst()){
             //var id = result.getInt(result.getColumnIndex(Constantes.COLUM_ID))
-            Toast.makeText(this,"USUARIO REGISTRADO ", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,resources.getString(R.string.toastUsuarioRegistrado), Toast.LENGTH_SHORT).show()
             val inten = Intent(this,TabActivity::class.java)
             startActivity(inten)
             finish()
 
         }else{
-            Toast.makeText(this,"EL USUARIO DEBE REGISTRARSE", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,resources.getString(R.string.toastSinUsuarioRegistrado), Toast.LENGTH_SHORT).show()
         }
 
         //EN CASO DE QUE EL USUARIO NO EXISTA
@@ -37,8 +37,8 @@ class LoginActivity : AppCompatActivity() {
             var dbManager = DbManager(this)
             var usuario= Usuario(nombre,telefono,identificacion)
             var result = dbManager.insertDataUsuario(usuario)
-            if(result>0){Toast.makeText(this,"GUARDADOS", Toast.LENGTH_SHORT).show()}
-            else{Toast.makeText(this,"DATOS NO ALMACENADOS", Toast.LENGTH_SHORT).show()}
+            if(result>0){Toast.makeText(this,resources.getString(R.string.toastGuardados), Toast.LENGTH_SHORT).show()}
+            else{Toast.makeText(this,resources.getString(R.string.toastNoGuardados), Toast.LENGTH_SHORT).show()}
             val inten = Intent(this,TabActivity::class.java)
             startActivity(inten)
             finish()

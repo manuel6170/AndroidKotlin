@@ -22,11 +22,30 @@
 
     <string name="textMarcaCardView">Marca</string>
     <string name="textViewNumHoras">Horas de Uso:</string>
-    <string name="textBtnEdit">Editar</string>
+    <string name="textBtnEdit">Guardar</string>
     <string name="textFechaInicio">Fecha Inicio:</string>
     <string name="textHoras">Horas:</string>
     <string name="textTotalPago">Total Pago:</string>
 
+    <string name="hintHoraUso">Numero de Hoas</string>
+    <string name="hintPesos">$0</string>
+
+    <string name="tabHome">Home</string>
+    <string name="tabFavoritos">Favoritos</string>
+    <string name="tabPerfil">Perfil</string>
+    <string name="tabReservas">Reservas</string>
+    <string name="toastUsuarioRegistrado">USUARIO REGISTRADO</string>
+    <string name="toastSinUsuarioRegistrado">EL USUARIO DEBE REGISTRARSE</string>
+    <string name="toastGuardados">Datos Almacenados</string>
+    <string name="toastNoGuardados">Datos No Almacenados</string>
+    <string name="toastSinGuardar">Sin Datos Internos</string>
+
+    <string name="toastDatosSinRecuperar">DATOS NO RECUPERADOS</string>
+
+    <string name="toastDatosUpdate">Datos Actualizados</string>
+
+
+    <string name="tabHome2">Home</string>
 
 
 </resources>
