@@ -96,6 +96,7 @@ class TimeActivity : AppCompatActivity() {
             myDialog!!.findViewById<TextView>(R.id.txtViewNombreDialog).text= nombre
             myDialog!!.findViewById<TextView>(R.id.txttViewTelefonoDialog).text= telefono
             myDialog!!.findViewById<TextView>(R.id.txtViewIdentiDialog).text= identificacion
+            myDialog!!.findViewById<TextView>(R.id.txtDiareccionDialog).text= direccion
             myDialog!!.findViewById<Button>(R.id.btnCancelar).setOnClickListener { myDialog!!.dismiss()
             Toast.makeText(this,"Accion Cancelada",Toast.LENGTH_SHORT).show()}
             myDialog!!.findViewById<Button>(R.id.btnEnviar).setOnClickListener {
