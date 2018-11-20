@@ -19,6 +19,7 @@
     <string name="editTextNameLogin">Nombre</string>
     <string name="editTextCelularLogin">Celular</string>
     <string name="editTextIdLogin">Identifiacion</string>
+    <string name="editTextIdDir">Direccion</string>
 
     <string name="textMarcaCardView">Marca</string>
     <string name="textViewNumHoras">Horas de Uso:</string>

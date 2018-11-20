@@ -69,6 +69,17 @@
             android:drawableLeft="@drawable/ic_phone_black_24dp"
             android:fontFamily="@font/roboto_thin"
             />
+        <EditText
+                android:id="@+id/editTxtDir"
+                android:layout_width="@dimen/widthEditTextView"
+                android:layout_height="wrap_content"
+                android:hint="@string/editTextIdDir"
+                android:inputType="number"
+                android:layout_margin="@dimen/layout_marginEditText"
+                android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                android:fontFamily="@font/roboto_thin"
+        />
+
 
         <Button
             android:id="@+id/guardarUsuarioId"
