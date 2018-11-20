@@ -46,7 +46,7 @@ lateinit var contenedor: ViewGroup
             view!!.findViewById<EditText>(R.id.direccionPerfil).hint = direccion
             view!!.findViewById<Button>(R.id.btnEditarUsuarioId).setOnClickListener {
                 view!!.findViewById<EditText>(R.id.nombrePerfil).isEnabled=true
-                view!!.findViewById<EditText>(R.id.IdentificacionPerfil).isEnabled=true
+                //view!!.findViewById<EditText>(R.id.IdentificacionPerfil).isEnabled=true
                 view!!.findViewById<EditText>(R.id.telefonoPerfil).isEnabled=true
                 view!!.findViewById<Button>(R.id.btnGuarUsuarioId).isEnabled=true
                 view!!.findViewById<Button>(R.id.btnGuarUsuarioId).setOnClickListener {

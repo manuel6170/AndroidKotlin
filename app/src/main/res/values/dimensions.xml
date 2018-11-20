@@ -40,7 +40,10 @@
 
     <dimen name="widthIcon">40dp</dimen>
     <dimen name="widthReservas">180dp</dimen>
-    <dimen name="textize">18sp</dimen>
+
+    <dimen name="widthbtnMap">50dp</dimen>
+
+    <dimen name="widthBtnMapTypes">120dp</dimen>
 
 
 

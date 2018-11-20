@@ -17,10 +17,10 @@ class TabActivity : AppCompatActivity() {
         setContentView(R.layout.activity_tab)
 
         var viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
-        viewPagerAdapter.AddFragment(FragmentListLavadoras(),"HOME")
-        viewPagerAdapter.AddFragment(FragmentFavoritos(),"FAVORITOS")
-        viewPagerAdapter.AddFragment(FragmentPerfil(),"PERFIL")
-        viewPagerAdapter.AddFragment(FragmentReservas(),"RESERVAS")
+        viewPagerAdapter.AddFragment(FragmentListLavadoras(),resources.getString(R.string.tabHome))
+        viewPagerAdapter.AddFragment(FragmentFavoritos(),resources.getString(R.string.tabFavoritos))
+        viewPagerAdapter.AddFragment(FragmentPerfil(),resources.getString(R.string.tabPerfil))
+        viewPagerAdapter.AddFragment(FragmentReservas(),resources.getString(R.string.tabReservas))
 
         viewPagerId.adapter = viewPagerAdapter
         tabLayoutId.setupWithViewPager(viewPagerId)
