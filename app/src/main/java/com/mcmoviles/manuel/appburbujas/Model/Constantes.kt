@@ -4,7 +4,7 @@ class Constantes {
     companion object {
 
         val NAME_BD ="BDLavadoras"
-        val VERSION_BD= 5
+        val VERSION_BD= 7
         val NAME_TABLE="lavadoras"
         val COLUM_ID="id"
         val COLUM_MARCA="marca"
@@ -17,6 +17,7 @@ class Constantes {
         val COLUMN_NOMBRE="nombre"
         val COLUMN_TELEFONO="telefono"
         val COLUMN_IDENTIFICACION="identificacion"
+        val COLUMN_DIRECCION="direccion"
         val NAME_TABLE_USUARIO="usuarios"
 
         val table="create table $NAME_TABLE (" +
@@ -31,7 +32,8 @@ class Constantes {
                 "$COLUM_ID INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "$COLUMN_NOMBRE TEXT," +
                 "$COLUMN_TELEFONO TEXT," +
-                "$COLUMN_IDENTIFICACION TEXT)"
+                "$COLUMN_IDENTIFICACION TEXT," +
+                "$COLUMN_DIRECCION TEXT)"
     }
 
 

@@ -16,7 +16,8 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
         var bundle = intent.extras
-        editTxtDir.hint= bundle["dir"].toString()
+        var direccion = bundle["dir"].toString()
+        editTxtDir.hint= direccion
         editTxtDir.isEnabled = false
 
         var dbManager = DbManager(this)
@@ -39,7 +40,7 @@ class LoginActivity : AppCompatActivity() {
             var telefono = editTxtCelular.text.toString()
             var identificacion = editTxtIdentificacion.text.toString()
             var dbManager = DbManager(this)
-            var usuario= Usuario(nombre,telefono,identificacion)
+            var usuario= Usuario(nombre,telefono,identificacion,direccion)
             var result = dbManager.insertDataUsuario(usuario)
             if(result>0){Toast.makeText(this,resources.getString(R.string.toastGuardados), Toast.LENGTH_SHORT).show()}
             else{Toast.makeText(this,resources.getString(R.string.toastNoGuardados), Toast.LENGTH_SHORT).show()}

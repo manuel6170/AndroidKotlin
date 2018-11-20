@@ -27,13 +27,15 @@ lateinit var contenedor: ViewGroup
             var nombre=""
             var telefono =""
             var identificacion=""
+            var direccion=""
             var dbManager= DbManager(contenedor!!.context)
             var result = dbManager.getAllDataUsuario()
             if (result!!.moveToFirst()){
                 nombre = result!!.getString(result!!.getColumnIndex(Constantes.COLUMN_NOMBRE))
                 telefono = result!!.getString(result!!.getColumnIndex(Constantes.COLUMN_TELEFONO))
                 identificacion = result!!.getString(result!!.getColumnIndex(Constantes.COLUMN_IDENTIFICACION))
-                usuario=Usuario(nombre,telefono,identificacion)
+                direccion= result!!.getString(result!!.getColumnIndex(Constantes.COLUMN_DIRECCION))
+                usuario=Usuario(nombre,telefono,identificacion,direccion)
                 //Toast.makeText(this,"EL USUARIO en SQL"+nombre, Toast.LENGTH_SHORT).show()
             }else{
                 Toast.makeText(contenedor!!.context,resources.getString(R.string.toastNoGuardados), Toast.LENGTH_SHORT).show()
@@ -41,6 +43,7 @@ lateinit var contenedor: ViewGroup
             view!!.findViewById<EditText>(R.id.nombrePerfil).hint=nombre
             view!!.findViewById<EditText>(R.id.IdentificacionPerfil).hint= identificacion
             view!!.findViewById<EditText>(R.id.telefonoPerfil).hint=telefono
+            view!!.findViewById<EditText>(R.id.direccionPerfil).hint = direccion
             view!!.findViewById<Button>(R.id.btnEditarUsuarioId).setOnClickListener {
                 view!!.findViewById<EditText>(R.id.nombrePerfil).isEnabled=true
                 view!!.findViewById<EditText>(R.id.IdentificacionPerfil).isEnabled=true
@@ -53,7 +56,7 @@ lateinit var contenedor: ViewGroup
                 }
 
             }
-        
+
         return view
     }
 

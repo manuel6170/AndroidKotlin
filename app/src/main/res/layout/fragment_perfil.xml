@@ -77,6 +77,18 @@
                 android:enabled="false"
         />
 
+        <EditText
+                android:id="@+id/direccionPerfil"
+                android:layout_width="@dimen/widthEditTextView"
+                android:layout_height="wrap_content"
+                android:hint="@string/editTextCelularLogin"
+                android:inputType="text"
+                android:layout_margin="@dimen/layoutMarginTextView"
+                android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                android:fontFamily="@font/roboto_thin"
+                android:enabled="false"
+        />
+
         <Button
                 android:id="@+id/btnGuarUsuarioId"
                 android:enabled="false"

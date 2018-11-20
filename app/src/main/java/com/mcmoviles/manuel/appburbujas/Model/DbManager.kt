@@ -81,6 +81,7 @@ class DbManager(context: Context?) {
         contentValues.put(Constantes.COLUMN_NOMBRE,usuario.nombre)
         contentValues.put(Constantes.COLUMN_TELEFONO,usuario.telefono)
         contentValues.put(Constantes.COLUMN_IDENTIFICACION,usuario.identificacion)
+        contentValues.put(Constantes.COLUMN_DIRECCION,usuario.direccion)
 
         //llamamos el metodo insert de SQLIteDatabase
         var result = db?.insert(Constantes.NAME_TABLE_USUARIO,null,contentValues)
@@ -110,7 +111,7 @@ class DbManager(context: Context?) {
 
     fun getAllDataUsuario(): Cursor {
         openDbReadable()
-        return db!!.query(Constantes.NAME_TABLE_USUARIO, arrayOf(Constantes.COLUMN_NOMBRE,Constantes.COLUMN_TELEFONO,Constantes.COLUMN_IDENTIFICACION),
+        return db!!.query(Constantes.NAME_TABLE_USUARIO, arrayOf(Constantes.COLUMN_NOMBRE,Constantes.COLUMN_TELEFONO,Constantes.COLUMN_IDENTIFICACION, Constantes.COLUMN_DIRECCION),
             null,null,null,null,null)
 
     }

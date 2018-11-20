@@ -34,6 +34,7 @@ class TimeActivity : AppCompatActivity() {
     lateinit var nombre: String
     lateinit var telefono :String
     lateinit var identificacion: String
+    lateinit var direccion: String
     lateinit var reserva: Reserva
     var totalPagar: Int?=null
     var horasUso: Int?=null
@@ -87,7 +88,8 @@ class TimeActivity : AppCompatActivity() {
                 nombre = result!!.getString(result!!.getColumnIndex(Constantes.COLUMN_NOMBRE))
                 telefono = result!!.getString(result!!.getColumnIndex(Constantes.COLUMN_TELEFONO))
                 identificacion = result!!.getString(result!!.getColumnIndex(Constantes.COLUMN_IDENTIFICACION))
-                usuario = Usuario(nombre,telefono,identificacion)
+                direccion = result!!.getString(result!!.getColumnIndex(Constantes.COLUMN_DIRECCION))
+                usuario = Usuario(nombre,telefono,identificacion,direccion)
             }else{ Toast.makeText(this,"EL USUARIO DEBE REGISTRARSE", Toast.LENGTH_SHORT).show()
             }
             myDialog!!.setContentView(R.layout.dialog_custom)
@@ -101,7 +103,7 @@ class TimeActivity : AppCompatActivity() {
                 val horaEnvio = sdf.format(Date())
                 var keyId = ref.push().key.toString()
                 val random = Random().nextInt(100000000).toString()
-                reserva=Reserva(random,lavadora.id.toString(),usuario.identificacion,totalPagar!!,horasUso!!,"carrea 17 # 60","enviada",horaEnvio)
+                reserva=Reserva(random,lavadora.id.toString(),usuario.identificacion,totalPagar!!,horasUso!!,direccion,"enviada",horaEnvio)
                 ref.child(random).setValue(reserva).addOnCompleteListener {
                     Toast.makeText(this,"Reservacion Guardada",Toast.LENGTH_SHORT).show()
                     myDialog!!.dismiss()
