@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Burbujas</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main3">Main3Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="titleBienvenidoLogin">WELCOME!</string>
+    <string name="textBtnGuardarLogin">Save</string>
+    <string name="textDescripcionLogin">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    </string>
+    <string name="editTextIdLogin">" ID"</string>
+    <string name="editTextNameLogin">Name</string>
+    <string name="editTextCelularLogin">Phone</string>
+    <string name="textMarcaCardView">Brand</string>
+    <string name="textViewNumHoras">"Hours of use "</string>
+    <string name="textBtnEdit">Save</string>
+    <string name="textFechaInicio">" Start Date:"</string>
+    <string name="textHoras">Housr:</string>
+    <string name="textTotalPago">Pay:</string>
+    <string name="hintHoraUso">"Number Of Hours "</string>
+    <string name="hintPesos">$0</string>
+    <string name="tabHome">Home</string>
+    <string name="tabFavoritos">Fvaorite</string>
+    <string name="tabPerfil">Profile</string>
+    <string name="tabReservas">Reservations</string>
+    <string name="toastUsuarioRegistrado">Registered User</string>
+    <string name="toastSinUsuarioRegistrado">User Must Register</string>
+    <string name="toastGuardados">Stored Data</string>
+    <string name="toastNoGuardados">Data were not Stored</string>
+    <string name="toastSinGuardar">"There is no data "</string>
+    <string name="toastDatosSinRecuperar">Data were not recovered</string>
+    <string name="toastDatosUpdate">"Updated Data "</string>
+    <string name="tabHome2">Home</string>
+    <string name="editTextIdDir">"Address "</string>
+</resources>
